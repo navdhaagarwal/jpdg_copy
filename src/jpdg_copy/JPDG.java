@@ -11,7 +11,13 @@ import label.LabelMaker;
 import label.ExpressionTreeLabels;
 import label.InstructionLabels;
 import label.OpLabels;
-
+import soot.Body;
+import soot.G;
+import soot.PackManager;
+import soot.Scene;
+import soot.SceneTransformer;
+import soot.SootClass;
+import soot.Transform;
 import soot.jimple.toolkits.callgraph.CHATransformer;
 import soot.jimple.toolkits.callgraph.CallGraph;
 import soot.options.Options;
@@ -23,36 +29,29 @@ public class JPDG {
 		List<String> excluded = new ArrayList<String>();
         String output = "output";
         String label_type = "op";
-        dirs.add("test");
-        
-		soot.G.reset();
-		addPacks();
-		soot.Scene S = soot.Scene.v();
-        Options O = Options.v();
-        
-        O.set_process_dir(dirs);
-        O.set_output_format(Options.output_format_jimple);
-        O.set_keep_line_number(true);
-        O.set_allow_phantom_refs(true);
-        O.set_keep_offset(true);
-        O.set_verbose(false);
-        
-        S.loadNecessaryClasses();
-        soot.PackManager.v().runPacks();
+        dirs.add("C:/Users/navdh/Desktop/project/java_file");
+
+//        writeGraph(build_PDG(S, excluded, label_type),output);
+      
 		
-        writeGraph(build_PDG(S, excluded, label_type),output);
-        
-	}
-	
-	
-	public static void addPacks() {
-		soot.PackManager.v().getPack("wjtp").add(new soot.Transform("wjtp.myTrans", new soot.SceneTransformer() {
-            @Override
-            protected void internalTransform(String phaseName, Map options) {
-                CHATransformer.v().transform();
-                CallGraph cg = soot.Scene.v().getCallGraph();
-            }
-        }));
+		Scene.v().setSootClassPath(Scene.v().getSootClassPath());
+		Scene.v().extendSootClassPath(System.getProperty("user.dir")+"\\bin");
+		Options.v().set_output_format(Options.output_format_jimple);
+		Options.v().set_keep_line_number(true);
+		Options.v().set_allow_phantom_refs(true);
+		Options.v().set_keep_offset(true);
+		Options.v().set_ignore_resolution_errors(true);
+		Options.v().set_verbose(false);
+		Options.v().setPhaseOption("jb", "use-original-names:true");
+		PackManager.v().getPack("jtp").add(new Transform("jtp.instrumenter", new MyAnalysis() {
+			protected void internalTransform(Body body, String phase, Map options) { 
+				G.v().out.println("Method Name: "+body.getMethod().getName());
+			}
+				
+		}));
+		soot.Main.main(args);
+		writeGraph(build_PDG(Scene.v(), excluded, label_type),output);
+		
 	}
 	
 	public static Graph build_PDG(soot.Scene S, List<String> excluded ,String label_type) {
