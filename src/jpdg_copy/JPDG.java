@@ -15,14 +15,11 @@ import soot.Body;
 import soot.G;
 import soot.PackManager;
 import soot.Scene;
-import soot.SceneTransformer;
 import soot.SootClass;
 import soot.SootMethod;
 import soot.Transform;
-import soot.jimple.toolkits.callgraph.CHATransformer;
 import soot.jimple.toolkits.callgraph.CallGraph;
 import soot.options.Options;
-import soot.util.Chain;
 
 public class JPDG {
 	public static void main(String args[])
