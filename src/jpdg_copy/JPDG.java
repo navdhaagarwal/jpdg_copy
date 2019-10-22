@@ -17,10 +17,12 @@ import soot.PackManager;
 import soot.Scene;
 import soot.SceneTransformer;
 import soot.SootClass;
+import soot.SootMethod;
 import soot.Transform;
 import soot.jimple.toolkits.callgraph.CHATransformer;
 import soot.jimple.toolkits.callgraph.CallGraph;
 import soot.options.Options;
+import soot.util.Chain;
 
 public class JPDG {
 	public static void main(String args[])
@@ -45,12 +47,12 @@ public class JPDG {
 		Options.v().setPhaseOption("jb", "use-original-names:true");
 		PackManager.v().getPack("jtp").add(new Transform("jtp.instrumenter", new MyAnalysis() {
 			protected void internalTransform(Body body, String phase, Map options) { 
-				G.v().out.println("Method Name: "+body.getMethod().getName());
+				writeGraph(build_PDG(Scene.v(), excluded, label_type),output);
 			}
 				
 		}));
 		soot.Main.main(args);
-		writeGraph(build_PDG(Scene.v(), excluded, label_type),output);
+		
 		
 	}
 	
@@ -68,9 +70,9 @@ public class JPDG {
         System.out.println("LABEL TYPE " + label_type + " " + lm);
         soot.util.Chain<soot.SootClass> classes = S.getApplicationClasses();
         CallGraph cg = null;
-        if (false) {
-            cg = S.getCallGraph();
-        }
+//        if (false) {
+//            cg = S.getCallGraph();
+//        }
         return PDG_Builder.build(cg, lm, classes, excluded);
 	}
 	
