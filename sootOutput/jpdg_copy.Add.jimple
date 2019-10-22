@@ -1,0 +1,31 @@
+public class jpdg_copy.Add extends java.lang.Object
+{
+
+    public void <init>()
+    {
+        jpdg_copy.Add this;
+
+        this := @this: jpdg_copy.Add;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public static void main(java.lang.String[])
+    {
+        java.lang.String[] args;
+        int $stack3;
+        java.io.PrintStream $stack4;
+
+        args := @parameter0: java.lang.String[];
+
+        $stack4 = <java.lang.System: java.io.PrintStream out>;
+
+        $stack3 = 10 + 20;
+
+        virtualinvoke $stack4.<java.io.PrintStream: void println(int)>($stack3);
+
+        return;
+    }
+}

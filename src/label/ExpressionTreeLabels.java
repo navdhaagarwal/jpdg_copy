@@ -40,7 +40,7 @@ import soot.toolkits.scalar.SimpleLiveLocals;
 import soot.toolkits.scalar.SmartLocalDefs;
 import soot.toolkits.scalar.SimpleLocalUses;
 import soot.toolkits.scalar.UnitValueBoxPair;
-
+import soot.Type;
 import soot.jimple.DefinitionStmt;
 import soot.jimple.internal.JimpleLocal;
 import soot.jimple.internal.JimpleLocalBox;
@@ -236,7 +236,8 @@ class TreeBuilder {
         soot.SootMethod m = expr.getMethod();
         Node params = new Node("params");
         Node returns = new Node("return");
-        for (soot.Type type : m.getParameterTypes()) {
+        List<Type> s = m.getParameterTypes();
+        for (Type type : s) {
             params.addkid(new Node(type));
         }
         Node n =(new Node("call"))
