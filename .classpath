@@ -2,8 +2,8 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre1.8.0_221"/>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="C:/Users/navdh/eclipse-workspace/jpdg_copy/gson-2.8.5.jar"/>
-	<classpathentry kind="lib" path="C:/Users/navdh/eclipse-workspace/jpdg_copy/common-lang3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/navdh/eclipse-workspace/jpdg_copy/sootclasses-trunk-jar-with-dependencies.jar"/>
+	<classpathentry kind="lib" path="C:/Users/navdh/eclipse-workspace/jpdg_copy/lib/gson-2.8.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/navdh/eclipse-workspace/jpdg_copy/lib/common-lang3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/navdh/eclipse-workspace/jpdg_copy/lib/sootclasses-trunk-jar-with-dependencies.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

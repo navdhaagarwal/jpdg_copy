@@ -26,7 +26,7 @@ public class JPDG {
 	{
 		List<String> dirs = new ArrayList<String>();
 		List<String> excluded = new ArrayList<String>();
-        String output = "output";
+        String output = "./output/output";
         String label_type = "op";
         dirs.add("C:/Users/navdh/Desktop/project/java_file");
 
@@ -48,7 +48,10 @@ public class JPDG {
 			}
 				
 		}));
-		soot.Main.main(args);
+		String a[] = new String[1];
+		a[0] = "jpdg_copy.Add";
+		
+		soot.Main.main(a);
 		
 		
 	}
