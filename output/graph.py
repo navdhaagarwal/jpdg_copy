@@ -21,16 +21,10 @@ for vertex in vertices:
 
 for edge in edges:
     edge_dict = json.loads(edge)
-    dot.edge( str(edge_dict["src"]), str(edge_dict["targ"]) ,label=str(edge_dict["label"]))
+    if( str(edge_dict["label"]) == ""):
+        dot.edge( str(edge_dict["src"]), str(edge_dict["targ"]) ,label=str(edge_dict["label"]), style = 'dashed')
+    else:
+        dot.edge( str(edge_dict["src"]), str(edge_dict["targ"]) ,label=str(edge_dict["label"]))
 
 print(dot)
 dot.render('PDG.gv', view=True)
-
-
-
-# vertex = components[12]
-
-# vertex = vertex[5:]
-# print(vertex)
-# # dic = json.loads(vertex)
-# # print(dic["id"])
