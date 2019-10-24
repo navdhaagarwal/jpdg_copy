@@ -22,17 +22,17 @@ import soot.jimple.toolkits.callgraph.CallGraph;
 import soot.options.Options;
 
 public class JPDG {
-	public static void main(String args[])
+	public static void test(String args[], String o)
 	{
 		List<String> dirs = new ArrayList<String>();
 		List<String> excluded = new ArrayList<String>();
-        String output = "./output/output";
+        String output = "./output/" + o;
         String label_type = "op";
         dirs.add("C:/Users/navdh/Desktop/project/java_file");
 
 //        writeGraph(build_PDG(S, excluded, label_type),output);
       
-		
+        soot.G.reset();
 		Scene.v().setSootClassPath(Scene.v().getSootClassPath());
 		Scene.v().extendSootClassPath(System.getProperty("user.dir")+"\\bin");
 		Options.v().set_output_format(Options.output_format_jimple);
@@ -48,10 +48,8 @@ public class JPDG {
 			}
 				
 		}));
-		String a[] = new String[1];
-		a[0] = "jpdg_copy.Add";
-		
-		soot.Main.main(a);
+
+			soot.Main.main(args);
 		
 		
 	}
