@@ -1,0 +1,20 @@
+// PDG
+digraph {
+	0 [label="method <test.Test2: void <init>()>"]
+	1 [label="method <test.Test2: void main(java.lang.String[])>"]
+	2 [label=this]
+	3 [label="call java.lang.Object.<init>"]
+	4 [label=return]
+	5 [label="param 0"]
+	6 [label=goto]
+	7 [label=goto]
+	8 [label=return]
+	0 -> 2 [label="" style=dashed]
+	0 -> 3 [label="" style=dashed]
+	0 -> 4 [label="" style=dashed]
+	1 -> 5 [label="" style=dashed]
+	1 -> 6 [label="" style=dashed]
+	1 -> 7 [label="" style=dashed]
+	1 -> 8 [label="" style=dashed]
+	2 -> 3 [label="test.Test2:0"]
+}

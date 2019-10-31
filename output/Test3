@@ -1,0 +1,22 @@
+vertex	{"id":0,"label":"method \u003ctest.Test3: void \u003cinit\u003e()\u003e","extra":"","package_name":"test","class_name":"test.Test3","source_file":"Test3.java","method_name":"\u003ctest.Test3: void \u003cinit\u003e()\u003e","type":"entry","start_line":2,"start_column":-1,"end_line":2,"end_column":-1}
+vertex	{"id":1,"label":"method \u003ctest.Test3: int bar1(int)\u003e","extra":"","package_name":"test","class_name":"test.Test3","source_file":"Test3.java","method_name":"\u003ctest.Test3: int bar1(int)\u003e","type":"entry","start_line":5,"start_column":-1,"end_line":5,"end_column":-1}
+vertex	{"id":2,"label":"this","extra":"Block 0:\r\n[preds: ] [succs: 1 ]\r\nthis :\u003d @this: test.Test3;\r\n","package_name":"test","class_name":"test.Test3","source_file":"Test3.java","method_name":"\u003ctest.Test3: void \u003cinit\u003e()\u003e","type":"block","start_line":-1,"start_column":-1,"end_line":-1,"end_column":-1}
+vertex	{"id":3,"label":"call java.lang.Object.\u003cinit\u003e","extra":"Block 1:\r\n[preds: 0 ] [succs: 2 ]\r\nspecialinvoke this.\u003cjava.lang.Object: void \u003cinit\u003e()\u003e();\r\n","package_name":"test","class_name":"test.Test3","source_file":"Test3.java","method_name":"\u003ctest.Test3: void \u003cinit\u003e()\u003e","type":"call","start_line":3,"start_column":-1,"end_line":3,"end_column":-1}
+vertex	{"id":4,"label":"return","extra":"Block 2:\r\n[preds: 1 ] [succs: ]\r\nreturn;\r\n","package_name":"test","class_name":"test.Test3","source_file":"Test3.java","method_name":"\u003ctest.Test3: void \u003cinit\u003e()\u003e","type":"block","start_line":3,"start_column":-1,"end_line":3,"end_column":-1}
+vertex	{"id":5,"label":"this","extra":"Block 0:\r\n[preds: ] [succs: 1 ]\r\nthis :\u003d @this: test.Test3;\r\n","package_name":"test","class_name":"test.Test3","source_file":"Test3.java","method_name":"\u003ctest.Test3: int bar1(int)\u003e","type":"block","start_line":-1,"start_column":-1,"end_line":-1,"end_column":-1}
+vertex	{"id":6,"label":"param 0","extra":"Block 1:\r\n[preds: 0 ] [succs: 2 ]\r\nx :\u003d @parameter0: int;\r\n","package_name":"test","class_name":"test.Test3","source_file":"Test3.java","method_name":"\u003ctest.Test3: int bar1(int)\u003e","type":"block","start_line":-1,"start_column":-1,"end_line":-1,"end_column":-1}
+vertex	{"id":7,"label":"*","extra":"Block 2:\r\n[preds: 1 ] [succs: 3 ]\r\nproduct \u003d x * 10;\r\n","package_name":"test","class_name":"test.Test3","source_file":"Test3.java","method_name":"\u003ctest.Test3: int bar1(int)\u003e","type":"block","start_line":7,"start_column":-1,"end_line":7,"end_column":-1}
+vertex	{"id":8,"label":"const \u002710\u0027","extra":"10","package_name":"test","class_name":"test.Test3","source_file":"Test3.java","method_name":"\u003ctest.Test3: int bar1(int)\u003e","type":"int","start_line":7,"start_column":-1,"end_line":7,"end_column":-1}
+vertex	{"id":9,"label":"return","extra":"Block 3:\r\n[preds: 2 ] [succs: ]\r\nreturn product;\r\n","package_name":"test","class_name":"test.Test3","source_file":"Test3.java","method_name":"\u003ctest.Test3: int bar1(int)\u003e","type":"block","start_line":8,"start_column":-1,"end_line":8,"end_column":-1}
+edge	{"src":0,"targ":2,"label":"","src_label":"method \u003ctest.Test3: void \u003cinit\u003e()\u003e","targ_label":"this"}
+edge	{"src":0,"targ":3,"label":"","src_label":"method \u003ctest.Test3: void \u003cinit\u003e()\u003e","targ_label":"call java.lang.Object.\u003cinit\u003e"}
+edge	{"src":0,"targ":4,"label":"","src_label":"method \u003ctest.Test3: void \u003cinit\u003e()\u003e","targ_label":"return"}
+edge	{"src":1,"targ":5,"label":"","src_label":"method \u003ctest.Test3: int bar1(int)\u003e","targ_label":"this"}
+edge	{"src":1,"targ":6,"label":"","src_label":"method \u003ctest.Test3: int bar1(int)\u003e","targ_label":"param 0"}
+edge	{"src":1,"targ":7,"label":"","src_label":"method \u003ctest.Test3: int bar1(int)\u003e","targ_label":"*"}
+edge	{"src":1,"targ":8,"label":"","src_label":"method \u003ctest.Test3: int bar1(int)\u003e","targ_label":"const \u002710\u0027"}
+edge	{"src":1,"targ":9,"label":"","src_label":"method \u003ctest.Test3: int bar1(int)\u003e","targ_label":"return"}
+edge	{"src":2,"targ":3,"label":"test.Test3:0","src_label":"this","targ_label":"call java.lang.Object.\u003cinit\u003e"}
+edge	{"src":8,"targ":7,"label":"int:2","src_label":"const \u002710\u0027","targ_label":"*"}
+edge	{"src":6,"targ":7,"label":"int:1","src_label":"param 0","targ_label":"*"}
+edge	{"src":7,"targ":9,"label":"int:0","src_label":"*","targ_label":"return"}

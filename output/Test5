@@ -1,0 +1,86 @@
+vertex	{"id":0,"label":"method \u003ctest.Test5: void \u003cinit\u003e()\u003e","extra":"","package_name":"test","class_name":"test.Test5","source_file":"Test5.java","method_name":"\u003ctest.Test5: void \u003cinit\u003e()\u003e","type":"entry","start_line":4,"start_column":-1,"end_line":4,"end_column":-1}
+vertex	{"id":1,"label":"method \u003ctest.Test5: int foo()\u003e","extra":"","package_name":"test","class_name":"test.Test5","source_file":"Test5.java","method_name":"\u003ctest.Test5: int foo()\u003e","type":"entry","start_line":6,"start_column":-1,"end_line":6,"end_column":-1}
+vertex	{"id":2,"label":"method \u003ctest.Test5: void main(java.lang.String[])\u003e","extra":"","package_name":"test","class_name":"test.Test5","source_file":"Test5.java","method_name":"\u003ctest.Test5: void main(java.lang.String[])\u003e","type":"entry","start_line":27,"start_column":-1,"end_line":27,"end_column":-1}
+vertex	{"id":3,"label":"this","extra":"Block 0:\r\n[preds: ] [succs: 1 ]\r\nthis :\u003d @this: test.Test5;\r\n","package_name":"test","class_name":"test.Test5","source_file":"Test5.java","method_name":"\u003ctest.Test5: void \u003cinit\u003e()\u003e","type":"block","start_line":-1,"start_column":-1,"end_line":-1,"end_column":-1}
+vertex	{"id":4,"label":"call java.lang.Object.\u003cinit\u003e","extra":"Block 1:\r\n[preds: 0 ] [succs: 2 ]\r\nspecialinvoke this.\u003cjava.lang.Object: void \u003cinit\u003e()\u003e();\r\n","package_name":"test","class_name":"test.Test5","source_file":"Test5.java","method_name":"\u003ctest.Test5: void \u003cinit\u003e()\u003e","type":"call","start_line":5,"start_column":-1,"end_line":5,"end_column":-1}
+vertex	{"id":5,"label":"return","extra":"Block 2:\r\n[preds: 1 ] [succs: ]\r\nreturn;\r\n","package_name":"test","class_name":"test.Test5","source_file":"Test5.java","method_name":"\u003ctest.Test5: void \u003cinit\u003e()\u003e","type":"block","start_line":5,"start_column":-1,"end_line":5,"end_column":-1}
+vertex	{"id":6,"label":"new","extra":"Block 0:\r\n[preds: ] [succs: 1 ]\r\n$stack5 \u003d new java.util.Scanner;\r\n","package_name":"test","class_name":"test.Test5","source_file":"Test5.java","method_name":"\u003ctest.Test5: int foo()\u003e","type":"block","start_line":7,"start_column":-1,"end_line":7,"end_column":-1}
+vertex	{"id":7,"label":"java.lang.System.in","extra":"Block 1:\r\n[preds: 0 ] [succs: 2 ]\r\n$stack6 \u003d \u003cjava.lang.System: java.io.InputStream in\u003e;\r\n","package_name":"test","class_name":"test.Test5","source_file":"Test5.java","method_name":"\u003ctest.Test5: int foo()\u003e","type":"block","start_line":7,"start_column":-1,"end_line":7,"end_column":-1}
+vertex	{"id":8,"label":"call java.util.Scanner.\u003cinit\u003e","extra":"Block 2:\r\n[preds: 1 ] [succs: 3 ]\r\nspecialinvoke $stack5.\u003cjava.util.Scanner: void \u003cinit\u003e(java.io.InputStream)\u003e($stack6);\r\n","package_name":"test","class_name":"test.Test5","source_file":"Test5.java","method_name":"\u003ctest.Test5: int foo()\u003e","type":"call","start_line":7,"start_column":-1,"end_line":7,"end_column":-1}
+vertex	{"id":9,"label":"call java.util.Scanner.nextInt","extra":"Block 3:\r\n[preds: 2 ] [succs: 4 ]\r\na \u003d virtualinvoke $stack5.\u003cjava.util.Scanner: int nextInt()\u003e();\r\n","package_name":"test","class_name":"test.Test5","source_file":"Test5.java","method_name":"\u003ctest.Test5: int foo()\u003e","type":"call","start_line":9,"start_column":-1,"end_line":9,"end_column":-1}
+vertex	{"id":10,"label":"call java.util.Scanner.nextInt","extra":"Block 4:\r\n[preds: 3 ] [succs: 5 ]\r\nb \u003d virtualinvoke $stack5.\u003cjava.util.Scanner: int nextInt()\u003e();\r\n","package_name":"test","class_name":"test.Test5","source_file":"Test5.java","method_name":"\u003ctest.Test5: int foo()\u003e","type":"call","start_line":10,"start_column":-1,"end_line":10,"end_column":-1}
+vertex	{"id":11,"label":"\u003c\u003d","extra":"Block 5:\r\n[preds: 4 ] [succs: 6 8 ]\r\nif a \u003c\u003d b goto b \u003d 11;\r\n","package_name":"test","class_name":"test.Test5","source_file":"Test5.java","method_name":"\u003ctest.Test5: int foo()\u003e","type":"control","start_line":11,"start_column":-1,"end_line":11,"end_column":-1}
+vertex	{"id":12,"label":"const \u002710\u0027","extra":"Block 6:\r\n[preds: 5 ] [succs: 7 ]\r\na \u003d 10;\r\n","package_name":"test","class_name":"test.Test5","source_file":"Test5.java","method_name":"\u003ctest.Test5: int foo()\u003e","type":"block","start_line":12,"start_column":-1,"end_line":12,"end_column":-1}
+vertex	{"id":13,"label":"goto","extra":"Block 7:\r\n[preds: 6 ] [succs: 9 ]\r\ngoto [?\u003d c \u003d 10];\r\n","package_name":"test","class_name":"test.Test5","source_file":"Test5.java","method_name":"\u003ctest.Test5: int foo()\u003e","type":"block","start_line":13,"start_column":-1,"end_line":13,"end_column":-1}
+vertex	{"id":14,"label":"const \u002711\u0027","extra":"Block 8:\r\n[preds: 5 ] [succs: 9 ]\r\nb \u003d 11;\r\n","package_name":"test","class_name":"test.Test5","source_file":"Test5.java","method_name":"\u003ctest.Test5: int foo()\u003e","type":"block","start_line":14,"start_column":-1,"end_line":14,"end_column":-1}
+vertex	{"id":15,"label":"const \u002710\u0027","extra":"Block 9:\r\n[preds: 7 8 ] [succs: 10 ]\r\nc \u003d 10;\r\n","package_name":"test","class_name":"test.Test5","source_file":"Test5.java","method_name":"\u003ctest.Test5: int foo()\u003e","type":"block","start_line":16,"start_column":-1,"end_line":16,"end_column":-1}
+vertex	{"id":16,"label":"goto","extra":"Block 10:\r\n[preds: 9 ] [succs: 13 ]\r\ngoto [?\u003d (branch)];\r\n","package_name":"test","class_name":"test.Test5","source_file":"Test5.java","method_name":"\u003ctest.Test5: int foo()\u003e","type":"block","start_line":17,"start_column":-1,"end_line":17,"end_column":-1}
+vertex	{"id":17,"label":"+","extra":"Block 11:\r\n[preds: 13 ] [succs: 12 ]\r\na \u003d a + -1;\r\n","package_name":"test","class_name":"test.Test5","source_file":"Test5.java","method_name":"\u003ctest.Test5: int foo()\u003e","type":"block","start_line":19,"start_column":-1,"end_line":19,"end_column":-1}
+vertex	{"id":18,"label":"const \u0027-1\u0027","extra":"-1","package_name":"test","class_name":"test.Test5","source_file":"Test5.java","method_name":"\u003ctest.Test5: int foo()\u003e","type":"int","start_line":19,"start_column":-1,"end_line":19,"end_column":-1}
+vertex	{"id":19,"label":"+","extra":"Block 12:\r\n[preds: 11 ] [succs: 13 ]\r\nc \u003d c + 10;\r\n","package_name":"test","class_name":"test.Test5","source_file":"Test5.java","method_name":"\u003ctest.Test5: int foo()\u003e","type":"block","start_line":20,"start_column":-1,"end_line":20,"end_column":-1}
+vertex	{"id":20,"label":"const \u002710\u0027","extra":"10","package_name":"test","class_name":"test.Test5","source_file":"Test5.java","method_name":"\u003ctest.Test5: int foo()\u003e","type":"int","start_line":20,"start_column":-1,"end_line":20,"end_column":-1}
+vertex	{"id":21,"label":"\u003e","extra":"Block 13:\r\n[preds: 10 12 ] [succs: 14 11 ]\r\nif a \u003e 5 goto a \u003d a + -1;\r\n","package_name":"test","class_name":"test.Test5","source_file":"Test5.java","method_name":"\u003ctest.Test5: int foo()\u003e","type":"control","start_line":17,"start_column":-1,"end_line":17,"end_column":-1}
+vertex	{"id":22,"label":"const \u00275\u0027","extra":"5","package_name":"test","class_name":"test.Test5","source_file":"Test5.java","method_name":"\u003ctest.Test5: int foo()\u003e","type":"int","start_line":17,"start_column":-1,"end_line":17,"end_column":-1}
+vertex	{"id":23,"label":"+","extra":"Block 14:\r\n[preds: 13 ] [succs: 15 ]\r\n$stack11 \u003d a + b;\r\n","package_name":"test","class_name":"test.Test5","source_file":"Test5.java","method_name":"\u003ctest.Test5: int foo()\u003e","type":"block","start_line":22,"start_column":-1,"end_line":22,"end_column":-1}
+vertex	{"id":24,"label":"java.lang.System.out","extra":"Block 16:\r\n[preds: 15 ] [succs: 17 ]\r\n$stack12 \u003d \u003cjava.lang.System: java.io.PrintStream out\u003e;\r\n","package_name":"test","class_name":"test.Test5","source_file":"Test5.java","method_name":"\u003ctest.Test5: int foo()\u003e","type":"block","start_line":23,"start_column":-1,"end_line":23,"end_column":-1}
+vertex	{"id":25,"label":"call java.io.PrintStream.println","extra":"Block 17:\r\n[preds: 16 ] [succs: 18 ]\r\nvirtualinvoke $stack12.\u003cjava.io.PrintStream: void println(int)\u003e(z);\r\n","package_name":"test","class_name":"test.Test5","source_file":"Test5.java","method_name":"\u003ctest.Test5: int foo()\u003e","type":"call","start_line":23,"start_column":-1,"end_line":23,"end_column":-1}
+vertex	{"id":26,"label":"return","extra":"Block 18:\r\n[preds: 17 ] [succs: ]\r\nreturn c;\r\n","package_name":"test","class_name":"test.Test5","source_file":"Test5.java","method_name":"\u003ctest.Test5: int foo()\u003e","type":"block","start_line":24,"start_column":-1,"end_line":24,"end_column":-1}
+vertex	{"id":27,"label":"param 0","extra":"Block 0:\r\n[preds: ] [succs: 1 ]\r\nargs :\u003d @parameter0: java.lang.String[];\r\n","package_name":"test","class_name":"test.Test5","source_file":"Test5.java","method_name":"\u003ctest.Test5: void main(java.lang.String[])\u003e","type":"block","start_line":-1,"start_column":-1,"end_line":-1,"end_column":-1}
+vertex	{"id":28,"label":"call test.Test5.foo","extra":"Block 1:\r\n[preds: 0 ] [succs: 2 ]\r\nstaticinvoke \u003ctest.Test5: int foo()\u003e();\r\n","package_name":"test","class_name":"test.Test5","source_file":"Test5.java","method_name":"\u003ctest.Test5: void main(java.lang.String[])\u003e","type":"call","start_line":28,"start_column":-1,"end_line":28,"end_column":-1}
+vertex	{"id":29,"label":"return","extra":"Block 2:\r\n[preds: 1 ] [succs: ]\r\nreturn;\r\n","package_name":"test","class_name":"test.Test5","source_file":"Test5.java","method_name":"\u003ctest.Test5: void main(java.lang.String[])\u003e","type":"block","start_line":29,"start_column":-1,"end_line":29,"end_column":-1}
+edge	{"src":0,"targ":3,"label":"","src_label":"method \u003ctest.Test5: void \u003cinit\u003e()\u003e","targ_label":"this"}
+edge	{"src":0,"targ":4,"label":"","src_label":"method \u003ctest.Test5: void \u003cinit\u003e()\u003e","targ_label":"call java.lang.Object.\u003cinit\u003e"}
+edge	{"src":0,"targ":5,"label":"","src_label":"method \u003ctest.Test5: void \u003cinit\u003e()\u003e","targ_label":"return"}
+edge	{"src":1,"targ":6,"label":"","src_label":"method \u003ctest.Test5: int foo()\u003e","targ_label":"new"}
+edge	{"src":1,"targ":7,"label":"","src_label":"method \u003ctest.Test5: int foo()\u003e","targ_label":"java.lang.System.in"}
+edge	{"src":1,"targ":8,"label":"","src_label":"method \u003ctest.Test5: int foo()\u003e","targ_label":"call java.util.Scanner.\u003cinit\u003e"}
+edge	{"src":1,"targ":9,"label":"","src_label":"method \u003ctest.Test5: int foo()\u003e","targ_label":"call java.util.Scanner.nextInt"}
+edge	{"src":1,"targ":10,"label":"","src_label":"method \u003ctest.Test5: int foo()\u003e","targ_label":"call java.util.Scanner.nextInt"}
+edge	{"src":1,"targ":11,"label":"","src_label":"method \u003ctest.Test5: int foo()\u003e","targ_label":"\u003c\u003d"}
+edge	{"src":1,"targ":15,"label":"","src_label":"method \u003ctest.Test5: int foo()\u003e","targ_label":"const \u002710\u0027"}
+edge	{"src":1,"targ":16,"label":"","src_label":"method \u003ctest.Test5: int foo()\u003e","targ_label":"goto"}
+edge	{"src":1,"targ":18,"label":"","src_label":"method \u003ctest.Test5: int foo()\u003e","targ_label":"const \u0027-1\u0027"}
+edge	{"src":1,"targ":20,"label":"","src_label":"method \u003ctest.Test5: int foo()\u003e","targ_label":"const \u002710\u0027"}
+edge	{"src":1,"targ":21,"label":"","src_label":"method \u003ctest.Test5: int foo()\u003e","targ_label":"\u003e"}
+edge	{"src":1,"targ":22,"label":"","src_label":"method \u003ctest.Test5: int foo()\u003e","targ_label":"const \u00275\u0027"}
+edge	{"src":1,"targ":23,"label":"","src_label":"method \u003ctest.Test5: int foo()\u003e","targ_label":"+"}
+edge	{"src":1,"targ":24,"label":"","src_label":"method \u003ctest.Test5: int foo()\u003e","targ_label":"java.lang.System.out"}
+edge	{"src":1,"targ":25,"label":"","src_label":"method \u003ctest.Test5: int foo()\u003e","targ_label":"call java.io.PrintStream.println"}
+edge	{"src":1,"targ":26,"label":"","src_label":"method \u003ctest.Test5: int foo()\u003e","targ_label":"return"}
+edge	{"src":2,"targ":27,"label":"","src_label":"method \u003ctest.Test5: void main(java.lang.String[])\u003e","targ_label":"param 0"}
+edge	{"src":2,"targ":28,"label":"","src_label":"method \u003ctest.Test5: void main(java.lang.String[])\u003e","targ_label":"call test.Test5.foo"}
+edge	{"src":2,"targ":29,"label":"","src_label":"method \u003ctest.Test5: void main(java.lang.String[])\u003e","targ_label":"return"}
+edge	{"src":21,"targ":17,"label":"","src_label":"\u003e","targ_label":"+"}
+edge	{"src":21,"targ":19,"label":"","src_label":"\u003e","targ_label":"+"}
+edge	{"src":11,"targ":12,"label":"","src_label":"\u003c\u003d","targ_label":"const \u002710\u0027"}
+edge	{"src":11,"targ":13,"label":"","src_label":"\u003c\u003d","targ_label":"goto"}
+edge	{"src":11,"targ":14,"label":"","src_label":"\u003c\u003d","targ_label":"const \u002711\u0027"}
+edge	{"src":3,"targ":4,"label":"test.Test5:0","src_label":"this","targ_label":"call java.lang.Object.\u003cinit\u003e"}
+edge	{"src":18,"targ":17,"label":"int:2","src_label":"const \u0027-1\u0027","targ_label":"+"}
+edge	{"src":19,"targ":23,"label":"int:2","src_label":"+","targ_label":"+"}
+edge	{"src":20,"targ":19,"label":"int:2","src_label":"const \u002710\u0027","targ_label":"+"}
+edge	{"src":10,"targ":23,"label":"int:2","src_label":"call java.util.Scanner.nextInt","targ_label":"+"}
+edge	{"src":14,"targ":23,"label":"int:2","src_label":"const \u002711\u0027","targ_label":"+"}
+edge	{"src":15,"targ":23,"label":"int:2","src_label":"const \u002710\u0027","targ_label":"+"}
+edge	{"src":24,"targ":25,"label":"java.io.PrintStream:1","src_label":"java.lang.System.out","targ_label":"call java.io.PrintStream.println"}
+edge	{"src":17,"targ":17,"label":"int:1","src_label":"+","targ_label":"+"}
+edge	{"src":17,"targ":23,"label":"int:1","src_label":"+","targ_label":"+"}
+edge	{"src":19,"targ":19,"label":"int:1","src_label":"+","targ_label":"+"}
+edge	{"src":22,"targ":21,"label":"int:1","src_label":"const \u00275\u0027","targ_label":"\u003e"}
+edge	{"src":9,"targ":17,"label":"int:1","src_label":"call java.util.Scanner.nextInt","targ_label":"+"}
+edge	{"src":9,"targ":23,"label":"int:1","src_label":"call java.util.Scanner.nextInt","targ_label":"+"}
+edge	{"src":10,"targ":11,"label":"int:1","src_label":"call java.util.Scanner.nextInt","targ_label":"\u003c\u003d"}
+edge	{"src":12,"targ":17,"label":"int:1","src_label":"const \u002710\u0027","targ_label":"+"}
+edge	{"src":12,"targ":23,"label":"int:1","src_label":"const \u002710\u0027","targ_label":"+"}
+edge	{"src":15,"targ":19,"label":"int:1","src_label":"const \u002710\u0027","targ_label":"+"}
+edge	{"src":6,"targ":8,"label":"java.util.Scanner:1","src_label":"new","targ_label":"call java.util.Scanner.\u003cinit\u003e"}
+edge	{"src":6,"targ":9,"label":"java.util.Scanner:1","src_label":"new","targ_label":"call java.util.Scanner.nextInt"}
+edge	{"src":6,"targ":10,"label":"java.util.Scanner:1","src_label":"new","targ_label":"call java.util.Scanner.nextInt"}
+edge	{"src":17,"targ":21,"label":"int:0","src_label":"+","targ_label":"\u003e"}
+edge	{"src":19,"targ":26,"label":"int:0","src_label":"+","targ_label":"return"}
+edge	{"src":23,"targ":25,"label":"int:0","src_label":"+","targ_label":"call java.io.PrintStream.println"}
+edge	{"src":9,"targ":21,"label":"int:0","src_label":"call java.util.Scanner.nextInt","targ_label":"\u003e"}
+edge	{"src":9,"targ":11,"label":"int:0","src_label":"call java.util.Scanner.nextInt","targ_label":"\u003c\u003d"}
+edge	{"src":12,"targ":21,"label":"int:0","src_label":"const \u002710\u0027","targ_label":"\u003e"}
+edge	{"src":15,"targ":26,"label":"int:0","src_label":"const \u002710\u0027","targ_label":"return"}
+edge	{"src":7,"targ":8,"label":"java.io.InputStream:0","src_label":"java.lang.System.in","targ_label":"call java.util.Scanner.\u003cinit\u003e"}
