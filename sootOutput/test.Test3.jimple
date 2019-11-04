@@ -1,0 +1,28 @@
+public class test.Test3 extends java.lang.Object
+{
+
+    public void <init>()
+    {
+        test.Test3 this;
+
+        this := @this: test.Test3;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    int bar1(int)
+    {
+        test.Test3 this;
+        int x, product;
+
+        this := @this: test.Test3;
+
+        x := @parameter0: int;
+
+        product = x * 10;
+
+        return product;
+    }
+}

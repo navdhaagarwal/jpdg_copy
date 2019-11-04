@@ -1,0 +1,82 @@
+public class test.Parent extends java.lang.Object
+{
+    static int x;
+
+    void <init>()
+    {
+        test.Parent this;
+
+        this := @this: test.Parent;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    void <init>(int)
+    {
+        test.Parent this;
+        int t;
+
+        this := @this: test.Parent;
+
+        t := @parameter0: int;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        <test.Parent: int x> = t;
+
+        return;
+    }
+
+    static void print(java.lang.String)
+    {
+        java.lang.String s, $stack4;
+        java.lang.StringBuilder $stack1, $stack3;
+        java.io.PrintStream $stack2;
+
+        s := @parameter0: java.lang.String;
+
+        $stack2 = <java.lang.System: java.io.PrintStream out>;
+
+        $stack1 = new java.lang.StringBuilder;
+
+        specialinvoke $stack1.<java.lang.StringBuilder: void <init>(java.lang.String)>("Print ");
+
+        $stack3 = virtualinvoke $stack1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(s);
+
+        $stack4 = virtualinvoke $stack3.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $stack2.<java.io.PrintStream: void println(java.lang.String)>($stack4);
+
+        return;
+    }
+
+    static void display(int, int)
+    {
+        int a, b, c;
+        java.lang.StringBuilder $stack3, $stack5;
+        java.io.PrintStream $stack4;
+        java.lang.String $stack6;
+
+        a := @parameter0: int;
+
+        b := @parameter1: int;
+
+        c = a + b;
+
+        $stack4 = <java.lang.System: java.io.PrintStream out>;
+
+        $stack3 = new java.lang.StringBuilder;
+
+        specialinvoke $stack3.<java.lang.StringBuilder: void <init>(java.lang.String)>("Display");
+
+        $stack5 = virtualinvoke $stack3.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>(c);
+
+        $stack6 = virtualinvoke $stack5.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $stack4.<java.io.PrintStream: void println(java.lang.String)>($stack6);
+
+        return;
+    }
+}

@@ -1,3 +1,31 @@
-class Subtract
+public class Subtract extends java.lang.Object
 {
+
+    public void <init>()
+    {
+        Subtract this;
+
+        this := @this: Subtract;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public static void main(java.lang.String[])
+    {
+        java.lang.String[] args;
+        int $stack3;
+        java.io.PrintStream $stack4;
+
+        args := @parameter0: java.lang.String[];
+
+        $stack4 = <java.lang.System: java.io.PrintStream out>;
+
+        $stack3 = 20 - 10;
+
+        virtualinvoke $stack4.<java.io.PrintStream: void println(int)>($stack3);
+
+        return;
+    }
 }

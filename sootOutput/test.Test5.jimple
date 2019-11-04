@@ -1,0 +1,75 @@
+public class test.Test5 extends java.lang.Object
+{
+
+    public void <init>()
+    {
+        test.Test5 this;
+
+        this := @this: test.Test5;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    static int foo()
+    {
+        int z, $stack11, a, b, c;
+        java.util.Scanner $stack5;
+        java.io.InputStream $stack6;
+        java.io.PrintStream $stack12;
+
+        $stack5 = new java.util.Scanner;
+
+        $stack6 = <java.lang.System: java.io.InputStream in>;
+
+        specialinvoke $stack5.<java.util.Scanner: void <init>(java.io.InputStream)>($stack6);
+
+        a = virtualinvoke $stack5.<java.util.Scanner: int nextInt()>();
+
+        b = virtualinvoke $stack5.<java.util.Scanner: int nextInt()>();
+
+        if a <= b goto label1;
+
+        a = 10;
+
+        goto label2;
+
+     label1:
+        b = 11;
+
+     label2:
+        c = 10;
+
+        goto label4;
+
+     label3:
+        a = a + -1;
+
+        c = c + 10;
+
+     label4:
+        if a > 5 goto label3;
+
+        $stack11 = a + b;
+
+        z = $stack11 + c;
+
+        $stack12 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $stack12.<java.io.PrintStream: void println(int)>(z);
+
+        return c;
+    }
+
+    public static void main(java.lang.String[])
+    {
+        java.lang.String[] args;
+
+        args := @parameter0: java.lang.String[];
+
+        staticinvoke <test.Test5: int foo()>();
+
+        return;
+    }
+}

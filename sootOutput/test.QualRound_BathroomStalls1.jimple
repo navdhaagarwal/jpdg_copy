@@ -1,0 +1,401 @@
+public class test.QualRound_BathroomStalls1 extends java.lang.Object
+{
+    java.io.BufferedReader br;
+    java.util.StringTokenizer st;
+    java.io.PrintWriter out;
+
+    public void <init>()
+    {
+        test.QualRound_BathroomStalls1 this;
+
+        this := @this: test.QualRound_BathroomStalls1;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    private java.lang.String solveTest() throws java.io.IOException
+    {
+        test.QualRound_BathroomStalls1 this;
+        long n, num, cnt, $stack15, $stack29, $stack31, $stack32, $stack33, $stack37, $stack58, $stack61, $stack62, k, max;
+        java.lang.String $stack12, $stack14, $stack64;
+        java.util.TreeMap $stack16;
+        java.lang.Long $stack17, $stack18, $stack22, $stack24, $stack26, $stack36, $stack38, $stack55;
+        java.lang.Object $stack21, $stack25, $stack54;
+        byte $stack30, $stack20;
+        java.lang.StringBuilder $stack57, $stack59, $stack60, $stack63;
+
+        this := @this: test.QualRound_BathroomStalls1;
+
+        $stack12 = virtualinvoke this.<test.QualRound_BathroomStalls1: java.lang.String next()>();
+
+        n = staticinvoke <java.lang.Long: long parseLong(java.lang.String)>($stack12);
+
+        $stack14 = virtualinvoke this.<test.QualRound_BathroomStalls1: java.lang.String next()>();
+
+        $stack15 = staticinvoke <java.lang.Long: long parseLong(java.lang.String)>($stack14);
+
+        k = $stack15 - 1L;
+
+        $stack16 = new java.util.TreeMap;
+
+        specialinvoke $stack16.<java.util.TreeMap: void <init>()>();
+
+        $stack17 = staticinvoke <java.lang.Long: java.lang.Long valueOf(long)>(n);
+
+        $stack18 = staticinvoke <java.lang.Long: java.lang.Long valueOf(long)>(1L);
+
+        virtualinvoke $stack16.<java.util.TreeMap: java.lang.Object put(java.lang.Object,java.lang.Object)>($stack17, $stack18);
+
+        goto label3;
+
+     label1:
+        $stack21 = virtualinvoke $stack16.<java.util.TreeMap: java.lang.Object lastKey()>();
+
+        $stack22 = (java.lang.Long) $stack21;
+
+        max = virtualinvoke $stack22.<java.lang.Long: long longValue()>();
+
+        $stack24 = staticinvoke <java.lang.Long: java.lang.Long valueOf(long)>(max);
+
+        $stack25 = virtualinvoke $stack16.<java.util.TreeMap: java.lang.Object remove(java.lang.Object)>($stack24);
+
+        $stack26 = (java.lang.Long) $stack25;
+
+        num = virtualinvoke $stack26.<java.lang.Long: long longValue()>();
+
+        cnt = staticinvoke <java.lang.Math: long min(long,long)>(num, k);
+
+        $stack29 = num - cnt;
+
+        $stack30 = $stack29 cmp 0L;
+
+        if $stack30 <= 0 goto label2;
+
+        $stack36 = staticinvoke <java.lang.Long: java.lang.Long valueOf(long)>(max);
+
+        $stack37 = num - cnt;
+
+        $stack38 = staticinvoke <java.lang.Long: java.lang.Long valueOf(long)>($stack37);
+
+        virtualinvoke $stack16.<java.util.TreeMap: java.lang.Object put(java.lang.Object,java.lang.Object)>($stack36, $stack38);
+
+     label2:
+        $stack31 = max / 2L;
+
+        specialinvoke this.<test.QualRound_BathroomStalls1: void add(java.util.TreeMap,long,long)>($stack16, $stack31, cnt);
+
+        $stack32 = max - 1L;
+
+        $stack33 = $stack32 / 2L;
+
+        specialinvoke this.<test.QualRound_BathroomStalls1: void add(java.util.TreeMap,long,long)>($stack16, $stack33, cnt);
+
+        k = k - cnt;
+
+     label3:
+        $stack20 = k cmp 0L;
+
+        if $stack20 > 0 goto label1;
+
+        $stack54 = virtualinvoke $stack16.<java.util.TreeMap: java.lang.Object lastKey()>();
+
+        $stack55 = (java.lang.Long) $stack54;
+
+        max = virtualinvoke $stack55.<java.lang.Long: long longValue()>();
+
+        $stack57 = new java.lang.StringBuilder;
+
+        specialinvoke $stack57.<java.lang.StringBuilder: void <init>()>();
+
+        $stack58 = max / 2L;
+
+        $stack59 = virtualinvoke $stack57.<java.lang.StringBuilder: java.lang.StringBuilder append(long)>($stack58);
+
+        $stack60 = virtualinvoke $stack59.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" ");
+
+        $stack61 = max - 1L;
+
+        $stack62 = $stack61 / 2L;
+
+        $stack63 = virtualinvoke $stack60.<java.lang.StringBuilder: java.lang.StringBuilder append(long)>($stack62);
+
+        $stack64 = virtualinvoke $stack63.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        return $stack64;
+    }
+
+    private void add(java.util.TreeMap, long, long)
+    {
+        test.QualRound_BathroomStalls1 this;
+        java.util.TreeMap q;
+        long k, v, $stack11, $stack12;
+        java.lang.Long vv, $stack8, $stack10, $stack13, $stack15, $stack16;
+        byte $stack7;
+        java.lang.Object $stack9;
+
+        this := @this: test.QualRound_BathroomStalls1;
+
+        q := @parameter0: java.util.TreeMap;
+
+        k := @parameter1: long;
+
+        v := @parameter2: long;
+
+        $stack7 = k cmp 0L;
+
+        if $stack7 != 0 goto label1;
+
+        return;
+
+     label1:
+        $stack8 = staticinvoke <java.lang.Long: java.lang.Long valueOf(long)>(k);
+
+        $stack9 = virtualinvoke q.<java.util.TreeMap: java.lang.Object get(java.lang.Object)>($stack8);
+
+        vv = (java.lang.Long) $stack9;
+
+        if vv != null goto label2;
+
+        $stack15 = staticinvoke <java.lang.Long: java.lang.Long valueOf(long)>(k);
+
+        $stack16 = staticinvoke <java.lang.Long: java.lang.Long valueOf(long)>(v);
+
+        virtualinvoke q.<java.util.TreeMap: java.lang.Object put(java.lang.Object,java.lang.Object)>($stack15, $stack16);
+
+        goto label3;
+
+     label2:
+        $stack10 = staticinvoke <java.lang.Long: java.lang.Long valueOf(long)>(k);
+
+        $stack11 = virtualinvoke vv.<java.lang.Long: long longValue()>();
+
+        $stack12 = $stack11 + v;
+
+        $stack13 = staticinvoke <java.lang.Long: java.lang.Long valueOf(long)>($stack12);
+
+        virtualinvoke q.<java.util.TreeMap: java.lang.Object put(java.lang.Object,java.lang.Object)>($stack10, $stack13);
+
+     label3:
+        return;
+    }
+
+    private void solve() throws java.io.IOException
+    {
+        test.QualRound_BathroomStalls1 this;
+        int n, $stack8, $stack15, i;
+        java.lang.String res, $stack12, $stack19;
+        java.lang.StringBuilder $stack6, $stack9, $stack10, $stack11, $stack13, $stack16, $stack17, $stack18;
+        java.io.PrintStream $stack7;
+        java.io.PrintWriter $stack14;
+
+        this := @this: test.QualRound_BathroomStalls1;
+
+        n = virtualinvoke this.<test.QualRound_BathroomStalls1: int nextInt()>();
+
+        i = 0;
+
+        goto label2;
+
+     label1:
+        res = specialinvoke this.<test.QualRound_BathroomStalls1: java.lang.String solveTest()>();
+
+        $stack7 = <java.lang.System: java.io.PrintStream out>;
+
+        $stack6 = new java.lang.StringBuilder;
+
+        specialinvoke $stack6.<java.lang.StringBuilder: void <init>(java.lang.String)>("Case #");
+
+        $stack8 = i + 1;
+
+        $stack9 = virtualinvoke $stack6.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($stack8);
+
+        $stack10 = virtualinvoke $stack9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(": ");
+
+        $stack11 = virtualinvoke $stack10.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(res);
+
+        $stack12 = virtualinvoke $stack11.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $stack7.<java.io.PrintStream: void println(java.lang.String)>($stack12);
+
+        $stack14 = this.<test.QualRound_BathroomStalls1: java.io.PrintWriter out>;
+
+        $stack13 = new java.lang.StringBuilder;
+
+        specialinvoke $stack13.<java.lang.StringBuilder: void <init>(java.lang.String)>("Case #");
+
+        $stack15 = i + 1;
+
+        $stack16 = virtualinvoke $stack13.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($stack15);
+
+        $stack17 = virtualinvoke $stack16.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(": ");
+
+        $stack18 = virtualinvoke $stack17.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(res);
+
+        $stack19 = virtualinvoke $stack18.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        virtualinvoke $stack14.<java.io.PrintWriter: void println(java.lang.String)>($stack19);
+
+        i = i + 1;
+
+     label2:
+        if i < n goto label1;
+
+        return;
+    }
+
+    java.lang.String next() throws java.io.IOException
+    {
+        test.QualRound_BathroomStalls1 this;
+        java.util.StringTokenizer $stack2, $stack6, $stack10, $stack1;
+        java.io.BufferedReader $stack3;
+        java.lang.String $stack4, $stack11;
+        boolean $stack7;
+
+        this := @this: test.QualRound_BathroomStalls1;
+
+        goto label2;
+
+     label1:
+        $stack2 = new java.util.StringTokenizer;
+
+        $stack3 = this.<test.QualRound_BathroomStalls1: java.io.BufferedReader br>;
+
+        $stack4 = virtualinvoke $stack3.<java.io.BufferedReader: java.lang.String readLine()>();
+
+        specialinvoke $stack2.<java.util.StringTokenizer: void <init>(java.lang.String)>($stack4);
+
+        this.<test.QualRound_BathroomStalls1: java.util.StringTokenizer st> = $stack2;
+
+     label2:
+        $stack1 = this.<test.QualRound_BathroomStalls1: java.util.StringTokenizer st>;
+
+        if $stack1 == null goto label1;
+
+        $stack6 = this.<test.QualRound_BathroomStalls1: java.util.StringTokenizer st>;
+
+        $stack7 = virtualinvoke $stack6.<java.util.StringTokenizer: boolean hasMoreTokens()>();
+
+        if $stack7 == 0 goto label1;
+
+        $stack10 = this.<test.QualRound_BathroomStalls1: java.util.StringTokenizer st>;
+
+        $stack11 = virtualinvoke $stack10.<java.util.StringTokenizer: java.lang.String nextToken()>();
+
+        return $stack11;
+    }
+
+    int nextInt() throws java.io.IOException
+    {
+        test.QualRound_BathroomStalls1 this;
+        java.lang.String $stack1;
+        int $stack2;
+
+        this := @this: test.QualRound_BathroomStalls1;
+
+        $stack1 = virtualinvoke this.<test.QualRound_BathroomStalls1: java.lang.String next()>();
+
+        $stack2 = staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>($stack1);
+
+        return $stack2;
+    }
+
+    public static void main(java.lang.String[]) throws java.io.FileNotFoundException
+    {
+        java.lang.String[] args;
+        test.QualRound_BathroomStalls1 $stack1;
+
+        args := @parameter0: java.lang.String[];
+
+        $stack1 = new test.QualRound_BathroomStalls1;
+
+        specialinvoke $stack1.<test.QualRound_BathroomStalls1: void <init>()>();
+
+        specialinvoke $stack1.<test.QualRound_BathroomStalls1: void run()>();
+
+        return;
+    }
+
+    private void run() throws java.io.FileNotFoundException
+    {
+        test.QualRound_BathroomStalls1 this;
+        java.io.BufferedReader $stack2;
+        java.io.FileReader $stack3;
+        java.lang.StringBuilder $stack4, $stack9, $stack12, $stack17;
+        java.lang.Class $stack5, $stack13;
+        java.lang.String $stack6, $stack7, $stack8, $stack10, $stack14, $stack15, $stack16, $stack18;
+        java.io.PrintWriter $stack11, $stack19;
+        java.io.IOException $stack20;
+
+        this := @this: test.QualRound_BathroomStalls1;
+
+        $stack2 = new java.io.BufferedReader;
+
+        $stack3 = new java.io.FileReader;
+
+        $stack4 = new java.lang.StringBuilder;
+
+        $stack5 = virtualinvoke this.<java.lang.Object: java.lang.Class getClass()>();
+
+        $stack6 = virtualinvoke $stack5.<java.lang.Class: java.lang.String getSimpleName()>();
+
+        $stack7 = virtualinvoke $stack6.<java.lang.String: java.lang.String substring(int,int)>(0, 1);
+
+        $stack8 = staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>($stack7);
+
+        specialinvoke $stack4.<java.lang.StringBuilder: void <init>(java.lang.String)>($stack8);
+
+        $stack9 = virtualinvoke $stack4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(".in");
+
+        $stack10 = virtualinvoke $stack9.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        specialinvoke $stack3.<java.io.FileReader: void <init>(java.lang.String)>($stack10);
+
+        specialinvoke $stack2.<java.io.BufferedReader: void <init>(java.io.Reader)>($stack3);
+
+        this.<test.QualRound_BathroomStalls1: java.io.BufferedReader br> = $stack2;
+
+        $stack11 = new java.io.PrintWriter;
+
+        $stack12 = new java.lang.StringBuilder;
+
+        $stack13 = virtualinvoke this.<java.lang.Object: java.lang.Class getClass()>();
+
+        $stack14 = virtualinvoke $stack13.<java.lang.Class: java.lang.String getSimpleName()>();
+
+        $stack15 = virtualinvoke $stack14.<java.lang.String: java.lang.String substring(int,int)>(0, 1);
+
+        $stack16 = staticinvoke <java.lang.String: java.lang.String valueOf(java.lang.Object)>($stack15);
+
+        specialinvoke $stack12.<java.lang.StringBuilder: void <init>(java.lang.String)>($stack16);
+
+        $stack17 = virtualinvoke $stack12.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(".out");
+
+        $stack18 = virtualinvoke $stack17.<java.lang.StringBuilder: java.lang.String toString()>();
+
+        specialinvoke $stack11.<java.io.PrintWriter: void <init>(java.lang.String)>($stack18);
+
+        this.<test.QualRound_BathroomStalls1: java.io.PrintWriter out> = $stack11;
+
+     label1:
+        specialinvoke this.<test.QualRound_BathroomStalls1: void solve()>();
+
+     label2:
+        goto label4;
+
+     label3:
+        $stack20 := @caughtexception;
+
+        virtualinvoke $stack20.<java.io.IOException: void printStackTrace()>();
+
+     label4:
+        $stack19 = this.<test.QualRound_BathroomStalls1: java.io.PrintWriter out>;
+
+        virtualinvoke $stack19.<java.io.PrintWriter: void close()>();
+
+        return;
+
+        catch java.io.IOException from label1 to label2 with label3;
+    }
+}

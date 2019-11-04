@@ -1,0 +1,37 @@
+public class test.Test4 extends java.lang.Object
+{
+
+    public void <init>()
+    {
+        test.Test4 this;
+
+        this := @this: test.Test4;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    static int foo()
+    {
+        int z, a, b, $stack9;
+        java.util.Scanner $stack5;
+        java.io.InputStream $stack6;
+
+        $stack5 = new java.util.Scanner;
+
+        $stack6 = <java.lang.System: java.io.InputStream in>;
+
+        specialinvoke $stack5.<java.util.Scanner: void <init>(java.io.InputStream)>($stack6);
+
+        a = virtualinvoke $stack5.<java.util.Scanner: int nextInt()>();
+
+        b = virtualinvoke $stack5.<java.util.Scanner: int nextInt()>();
+
+        $stack9 = a + b;
+
+        z = $stack9 + 10;
+
+        return z;
+    }
+}

@@ -1,0 +1,59 @@
+public class test.Numbers extends java.lang.Object
+{
+    static int x;
+
+    void <init>()
+    {
+        test.Numbers this;
+
+        this := @this: test.Numbers;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    void <init>(int)
+    {
+        test.Numbers this;
+        int t;
+
+        this := @this: test.Numbers;
+
+        t := @parameter0: int;
+
+        specialinvoke this.<java.lang.Object: void <init>()>();
+
+        <test.Numbers: int x> = t;
+
+        return;
+    }
+
+    static void print()
+    {
+        int $stack0, $stack1, $stack3, $stack4;
+        java.io.PrintStream $stack2;
+
+        goto label2;
+
+     label1:
+        $stack2 = <java.lang.System: java.io.PrintStream out>;
+
+        $stack1 = <test.Numbers: int x>;
+
+        virtualinvoke $stack2.<java.io.PrintStream: void println(int)>($stack1);
+
+        $stack3 = <test.Numbers: int x>;
+
+        $stack4 = $stack3 - 1;
+
+        <test.Numbers: int x> = $stack4;
+
+     label2:
+        $stack0 = <test.Numbers: int x>;
+
+        if $stack0 > 0 goto label1;
+
+        return;
+    }
+}

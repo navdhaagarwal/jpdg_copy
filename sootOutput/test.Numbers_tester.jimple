@@ -1,0 +1,53 @@
+public class test.Numbers_tester extends test.Numbers
+{
+    int num;
+
+    void <init>()
+    {
+        test.Numbers_tester this;
+
+        this := @this: test.Numbers_tester;
+
+        specialinvoke this.<test.Numbers: void <init>()>();
+
+        return;
+    }
+
+    static void show(int)
+    {
+        int a;
+        test.Numbers $stack2;
+
+        a := @parameter0: int;
+
+        $stack2 = new test.Numbers;
+
+        specialinvoke $stack2.<test.Numbers: void <init>(int)>(a);
+
+        staticinvoke <test.Numbers: void print()>();
+
+        return;
+    }
+
+    public static void main(java.lang.String[])
+    {
+        java.lang.String[] args;
+        int i;
+
+        args := @parameter0: java.lang.String[];
+
+        i = 0;
+
+        goto label2;
+
+     label1:
+        staticinvoke <test.Numbers_tester: void show(int)>(i);
+
+        i = i + 1;
+
+     label2:
+        if i < 5 goto label1;
+
+        return;
+    }
+}
