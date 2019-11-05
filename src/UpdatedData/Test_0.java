@@ -1,9 +1,9 @@
-package ProgramData;
+package UpdatedData;
 import java.io.*;
 import java.util.StringTokenizer;
 import java.util.TreeMap;
 
-public class C {
+public class Test_0 {
 
     private String solveTest() throws IOException {
         long n = Long.parseLong(next());
