@@ -17,7 +17,7 @@ public class Test_86 {
         for (int i = 1; i <= t; ++i) {
             long n = in.nextLong();
             long k = in.nextLong();
-            Pair res = (new Main()).solve(n, k);
+            Pair res = (new Test_86()).solve(n, k);
             System.out.println("Case #" + i + ": " + res.x1 + " " + res.x0);
         }
     }

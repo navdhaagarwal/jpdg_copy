@@ -36,7 +36,7 @@ public class Test_42 {
 
 	public static void main(String[] args) throws Exception {
 		Locale.setDefault(Locale.US);
-		new C().repSolve();
+		new Test_42().repSolve();
 	}
 
 	void repSolve() throws Exception {

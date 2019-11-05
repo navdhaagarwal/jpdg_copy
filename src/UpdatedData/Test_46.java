@@ -147,7 +147,7 @@ public class Test_46 {
 
     public static void main(String[] args) {
         try {
-            new C().go();
+            new Test_46().go();
         } catch (IOException e) {
             e.printStackTrace();
         }

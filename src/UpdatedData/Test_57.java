@@ -145,7 +145,7 @@ public class Test_57 {
 		for (int t = 1; t <= T; t++) {
 			out.print("Case #" + t + ": ");
 			System.out.println(String.format("Case #%d: ............", t));
-			(new C()).solve();
+			(new Test_57()).solve();
 		}
 	}
 

@@ -9,7 +9,7 @@ public class Test_73{
     public static long vis;
     public static int cas=0;
 
-    public Stall(String t){
+    public Test_73(String t){
 	String[] token;
 	token = t.split(" ");
 	ecart = Long.parseLong(token[0]);
@@ -18,7 +18,7 @@ public class Test_73{
 	next = null;
     }
 
-    public Stall(long n, Stall s,long e){
+    public Test_73(long n, Stall s,long e){
 	nb = n;
 	next = s;
 	ecart = e;
@@ -31,12 +31,12 @@ public class Test_73{
 	    pos = pos.next;
 	}
 	if (pos == null){
-	    Stall s = new Stall(n,null,e);
+	    Stall s = new Test_73(n,null,e);
 	    prece.next = s;
 	}else if(pos.ecart == e){
 	    pos.nb += n;
 	}else{
-	    Stall s = new Stall(n,pos,e);
+	    Stall s = new Test_73(n,pos,e);
 	    prece.next = s;
 	}
     }
@@ -86,7 +86,7 @@ public class Test_73{
 	    int nb = Integer.parseInt(br.readLine());
 	    while(nb > 0){
 		ligne=br.readLine();
-		Stall a = new Stall(ligne);
+		Stall a = new Test_73(ligne);
 		chaine += a.aff();
 		nb--;
 	    }

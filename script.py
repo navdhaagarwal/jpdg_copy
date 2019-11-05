@@ -15,22 +15,40 @@ count = 0
 
 for data_file in files:
     print(data_file)
+    print(count)
     f = open(data_file, "r")
     contents = f.read().split("\n")
 
     data_file_name = "Test_"+str(count)
     package = 0
     index = 0
+    class_name = ""
+
     for line in contents:
         if("package" in line):
             line = "package UpdatedData;"
             package = 1
+
         if("public class" in line):
             words = re.split(' |{', line)
             class_name = words[2]
             k = line.find("public class")
             line = line[:k+12] + line[k+12:].replace(class_name,data_file_name, 1)
             # print(line)
+
+        words = re.split(' |{|\(|\)|\t', line)
+        if("new" in words):
+            i = words.index("new")
+            if(words[i+1] == class_name):
+                k = line.find("new "+class_name)
+                line = line[ : k+4] + line[ k+4 : ].replace(class_name,data_file_name, 1)
+        
+        if("public" in words):
+            i = words.index("public")
+            if(words[i+1] == class_name):
+                k = line.find("public "+class_name)
+                line = line[ : k+7] + line[ k+7 : ].replace(class_name,data_file_name, 1)
+        
 
         contents[index] = line
         index += 1

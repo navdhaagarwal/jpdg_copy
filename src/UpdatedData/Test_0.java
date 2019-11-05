@@ -61,7 +61,7 @@ public class Test_0 {
     }
 
     public static void main(String[] args) throws FileNotFoundException {
-        new C().run();
+        new Test_0().run();
     }
 
     private void run() throws FileNotFoundException {

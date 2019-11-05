@@ -40,7 +40,7 @@ public class Test_62 {
         }
     }
     
-    public static void main(String[] args) throws FileNotFoundException {    new Utkarsh().run();    }
+    public static void main(String[] args) throws FileNotFoundException {    new Test_62().run();    }
     void run() throws FileNotFoundException{
         File fi=new File("input.txt");
         try{

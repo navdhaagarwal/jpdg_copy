@@ -25,7 +25,7 @@ public class Test_65 {
 	private Scanner in;
 	private PrintStream out;
 	
-	public C () throws FileNotFoundException {
+	public Test_65 () throws FileNotFoundException {
 		in = new Scanner(new File(RELATIVE_PATH + ".in"));	
 		out = new PrintStream(RELATIVE_PATH + ".out"); 
 			
@@ -189,7 +189,7 @@ public class Test_65 {
 	
 	public static void main(String[] args) {
 		try {
-			new C();
+			new Test_65();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

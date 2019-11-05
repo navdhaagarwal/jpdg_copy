@@ -68,7 +68,7 @@ public class Test_37 {
 	}
 
 	public static void main(String[] args) {
-		new C().run();
+		new Test_37().run();
 	}
 }
 

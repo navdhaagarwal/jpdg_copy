@@ -148,7 +148,7 @@ public class Test_1 implements Runnable {
 		public long S;
 	}
 	
-	public C(int cas, Scanner in)
+	public Test_1(int cas, Scanner in)
 	{
 		this.cas = cas;
 		this.in = in;
@@ -180,7 +180,7 @@ public class Test_1 implements Runnable {
 		
 		preprocess();
 		for(int i = 0;i < n;i++){
-			C runner = new C(i+1, in);
+			C runner = new Test_1(i+1, in);
 			runner.read();
 			cs.submit(runner, runner);
 		}

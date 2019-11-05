@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Test_74 {
 	public static void main(String args[]) throws FileNotFoundException {
 		String filename = "C-large";
-		new C2().run(
+		new Test_74().run(
 				new Scanner(new File(filename + ".in")),
 				System.out);
 	}

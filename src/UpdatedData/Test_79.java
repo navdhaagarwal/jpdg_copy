@@ -8,7 +8,7 @@ public class Test_79 {
 
 
     public static void main(String[]args){
-        ProblemC m = new ProblemC();
+        ProblemC m = new Test_79();
         m.run();
     }
 

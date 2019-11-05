@@ -49,7 +49,7 @@ public class Test_38 {
         int times=scanner.nextInt();
         long start=System.currentTimeMillis();
         for (int t=1;t<=times;t++) {
-            System.out.println(String.format("Case #%d: %s", t, new Main().solve(scanner)));
+            System.out.println(String.format("Case #%d: %s", t, new Test_38().solve(scanner)));
         }
         long end=System.currentTimeMillis();
         System.err.println(String.format("Time used: %.3fs", (end-start)/1000.0));

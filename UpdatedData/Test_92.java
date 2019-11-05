@@ -89,7 +89,7 @@ public class Test_92 implements Runnable {
 		}
 	}
 	
-	public Solution(String name) throws IOException {
+	public Test_92(String name) throws IOException {
 		Locale.setDefault(Locale.US);
 		if (name == null) {
 			in = new BufferedReader(new InputStreamReader(System.in));

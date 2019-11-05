@@ -6,7 +6,7 @@ public class Test_7 {
 
     public static void main(String[] args) throws IOException {
 
-        new Main().go();
+        new Test_7().go();
     }
 
     PrintWriter out;

@@ -86,7 +86,7 @@ public class Test_29 {
 		out = new BufferedWriter(new FileWriter(new File(OUTPUT_FILE_NAME)));
 		NUMBER_OF_TEST = new Integer(in.readLine());
 		for (CURRENT_TEST = 0; CURRENT_TEST < NUMBER_OF_TEST; CURRENT_TEST++) {
-			CSmall2 instance = new CSmall2();
+			CSmall2 instance = new Test_29();
 			instance.input();
 			instance.process();
 			instance.output();

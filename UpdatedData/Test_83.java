@@ -47,7 +47,7 @@ public class Test_83 {
     }
     
     public static void main(String[] args) throws Exception {
-        new Stalls().run();
+        new Test_83().run();
     }
 
 }

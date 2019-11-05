@@ -82,7 +82,7 @@ public class Test_58 {
             System.setIn(new BufferedInputStream(new FileInputStream(args.length > 0 ? args[0] : (codejam2017QCL.class.getName() + ".in"))));
         } catch (Exception e) {
         }
-        new codejam2017QCL().run();
+        new Test_58().run();
     }
 }
 

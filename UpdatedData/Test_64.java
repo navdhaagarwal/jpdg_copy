@@ -66,7 +66,7 @@ public class Test_64 {
     }
 
     public static void main(String[] args) throws Exception {
-        BathroomStalls m = new BathroomStalls();
+        BathroomStalls m = new Test_64();
         m.processInput();
     }
 }

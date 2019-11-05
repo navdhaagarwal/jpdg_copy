@@ -15,7 +15,7 @@ public class Test_96 {
 
 	private long n, k;
 	
-	public Test(InputReader reader) throws IOException {
+	public Test_96(InputReader reader) throws IOException {
 		n = reader.nextLong();
 		k = reader.nextLong();
 	}
@@ -52,7 +52,7 @@ public class Test_96 {
 			int testCaseN = reader.nextInt();
 			final String[] result = new String[testCaseN];
 			for (int i = 0; i < testCaseN; i++) {
-				final Test test = new Test(reader);
+				final Test test = new Test_96(reader);
 				final int ii = i;
 				executorService.submit(new Runnable() {
 					@Override

@@ -13,7 +13,7 @@ public class Test_48 {
     private static final Path output = Paths.get("C.out");
 
     public static void main(String[] args) throws IOException {
-        new C().solve();
+        new Test_48().solve();
     }
 
     private void solve() throws IOException {

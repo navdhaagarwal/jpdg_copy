@@ -75,10 +75,10 @@ public class Test_52 {
 	
 	public static void main(String [] argv)
 	{
-		new RQP3(argv[0]);
+		new Test_52(argv[0]);
 	}
 	
-	public RQP3(String inputFile)
+	public Test_52(String inputFile)
 	{
 		openInput(inputFile);
 		readNextLine();

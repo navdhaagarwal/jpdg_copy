@@ -76,7 +76,7 @@ public class Test_77 {
     int tests = in.readInt();
     for (int t = 1; t <= tests; t++) {
       out.print("Case #" + t + ": ");
-      new C().solve();
+      new Test_77().solve();
       System.out.println("Case #" + t + ": solved");
     }
     out.close();

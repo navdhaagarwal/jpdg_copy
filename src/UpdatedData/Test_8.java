@@ -32,7 +32,7 @@ public class Test_8{
 		for(int t=0;t<T;t++){
 			long N = scan.nextLong();
 			long K = scan.nextLong();
-			(new Main()).main2(t+1, N+1, K);
+			(new Test_8()).main2(t+1, N+1, K);
 		}
 	}
 
